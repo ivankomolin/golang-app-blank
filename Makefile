@@ -8,11 +8,5 @@ CONTAINER = docker run --rm \
 		-e GOARCH=amd64 \
 		golang:1.8
 
-build:
-	bash -c "${CONTAINER} go build ${path}"
-
-run:
-	bash -c "${CONTAINER} go run ${path}"
-
-get:
-	bash -c "${CONTAINER} go get ${path}"
+go:
+	bash -c "${CONTAINER} ${cmd}" || true
