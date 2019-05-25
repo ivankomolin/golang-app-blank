@@ -1,7 +1,7 @@
 .PHONY: *
 
 CONTAINER = docker run --rm \
-	-v ${PWD}:/usr/src/myapp \
+	-v ${PWD}/app/:/usr/src/myapp/ \
 		-w /usr/src/myapp \
 		-e GOPATH=/usr/src/myapp \
 		-e GOOS=linux \
